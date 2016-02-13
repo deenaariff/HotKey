@@ -7,3 +7,5 @@ sleep 25
 echo "Inserting mock data"
 mongoimport --db mock --collection users --drop --file mock-users.json --jsonArray
 mongoimport --db mock --collection services --drop --file mock-services.json --jsonArray
+echo "Starting python webapp on port 5000"
+python app.py > app.out &
