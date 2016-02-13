@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //chrome.extension.getBackgroundPage().alert(); //console.log('foo');
 
+    url = "http://fc85217d.ngrok.io";
     // url = "http://7a855198.ngrok.io/services/003";
 
     /*$.get(url, function(data) {
