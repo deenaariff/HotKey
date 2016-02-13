@@ -1,8 +1,9 @@
 [{
 	"name": "Saruman",
 	"user_id": "000",
-	"services": {
-			"001": {
+	"services": [
+		{
+				"service_id": "001",
 				"users_current": "0",
 				"users_max": "2", 
 				"users_allow": ["003"],
@@ -10,14 +11,15 @@
 					"username": "sarumanrules",
 					"password": "onetorulethemall"
 				}
-			}
 		}
+	]
 },
 {
 	"name": "Gandolf",
 	"user_id": "003",
-	"services": {
-		"000": { 
+	"services": [
+		{
+			"service_id": "000",
 			"users_current": "0",
 			"users_max": "2", 
 			"users_allow": ["001", "002"],
@@ -26,7 +28,7 @@
 				"password": "gimili"
 			}
 		}
-	}
+	]
 },
 {	
 	"name": "Frodo",
