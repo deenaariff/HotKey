@@ -1,0 +1,43 @@
+[{
+	"name": "Saruman",
+	"user_id": "000",
+	"services": [
+		{
+				"service_id": "001",
+				"users_current": "0",
+				"users_max": "2", 
+				"users_allow": ["003"],
+				"auth_bundle": {
+					"username": "sarumanrules",
+					"password": "onetorulethemall"
+				}
+		}
+	]
+},
+{
+	"name": "Gandolf",
+	"user_id": "003",
+	"services": [
+		{
+			"service_id": "000",
+			"users_current": "0",
+			"users_max": "2", 
+			"users_allow": ["001", "002"],
+			"auth_bundle": {
+				"username": "gdawg",
+				"password": "gimili"
+			}
+		}
+	]
+},
+{	
+	"name": "Frodo",
+	"user_id": "001",
+	"services": {}
+},
+{	
+	"name": "Bilbo",
+	"user_id": "002",
+	"services": {}
+}]
+
