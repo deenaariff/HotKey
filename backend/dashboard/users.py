@@ -32,9 +32,10 @@ def _addAuth(user_id, service, new_user):
 	result = 0
 	for user in users_coll.find():
 		if user["user_id"] == user_id:
-			services = user["services"]
-			for s in services:
-				if s == service:
+			for s in user["services"]:
+				pp = pprint.PrettyPrinter(depth=6)
+				pp.pprint(s);  
+				if s["service_id"] == service:
 			 		users_coll.update(s["users_allow"], {'$push': new_user}, True)
 	return result
 
@@ -45,9 +46,9 @@ def _remAuth(user_id, existing_user):
 	result = 0
 	for user in users_coll.find():
 		if user["user_id"] == user_id:
-			services = user["services"]
-			for s in services:
-				if s == service:
+			for s in user["services"]:
+				print s
+				if s["service_id"] == service:
 			 		users_coll.update(s["users_allow"], {'$pull': existing_user}, True)
 	return result
 
