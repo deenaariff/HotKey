@@ -40,7 +40,7 @@ def _addAuth(user_id, service, new_user):
 
 
 
-# remove end-user authentication to services 
+#  remove end-user authentication to services 
 def _remAuth(user_id, existing_user):
 	result = 0
 	for user in users_coll.find():
