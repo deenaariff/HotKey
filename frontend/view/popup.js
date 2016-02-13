@@ -1,21 +1,53 @@
+var test3;
+
 function clickHandler(e) {
     chrome.runtime.sendMessage({directive: "popup-click"}, function(response) {
         this.close(); // close the popup when the background finishes processing request
     });
 }
 
-
+function changeHostName(name) {
+  document.getElementById('host').innerHTML=name;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-    // if (Notification.permission !== "granted") {
-    //   Notification.requestPermission();
-    // }
+  // on load, pull the permission
 
-    document.getElementById('host').innerHTML="Ben Shukman";
+  // if (Notification.permission !== "granted") {
+  //   Notification.requestPermission();
+  // }
 
-    document.getElementById('click-me').addEventListener('click', function() {
-      console.log("yes");
+  document.getElementById("button-wrapper").addEventListener('click', function(e) {
+    // e.preventDefault()
+    // console.log("hello");
+
+    // alert('hello');
+
+    // chrome.extension.getBackgroundPage().alert(); //console.log('foo');
+
+    // var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = handleStateChange; // Implemented elsewhere.
+    // xhr.open("GET", chrome.extension.getURL("http://7a855198.ngrok.io/services/003"), true);
+    // xhr.send();
+    // alert(xhr.status());
+    // alert(xhr.response());
+
+    url = "https://www.google.com/";
+    // url = "http://7a855198.ngrok.io/services/003";
+
+    $.get(url, function(data) {
+
+      // redirect to another page:
+      // chrome.extension.sendRequest({redirect: "https://www.netflix.com/Login"}); // send message to redirect
+      // chrome.runtime.sendMessage({redirect: "https://www.netflix.com/Login"});
+
+      chrome.extension.getBackgroundPage().alert("Load was performed." + data);
+      changeHostName("Deen");
     });
+
+  });
+
+  document.getElementById('host').innerHTML="Ben Shukman";
 })
 
 

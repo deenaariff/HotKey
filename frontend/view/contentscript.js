@@ -1,1 +1,1 @@
-console.log("what up world!");
+alert("what up world!");

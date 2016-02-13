@@ -1,13 +1,17 @@
 <html>
     <head>
-        <script src="popup.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+      <script src="popup.js"></script>
+      <link rel="stylesheet" href="style.css">
+      <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+      <script src="jquery-2.2.0.min.js"></script>
     </head>
     <body>
       <div id="container">
         <p id="popup_title"> Services available to you </p>
-        <img id="button" src="netflix_compact_logo.png" alt="Netflix Logo">
+          <a id="button-wrapper" href="#click-me">
+            <!-- highlighted currently -->
+            <img id="button" src="netflix_compact_logo.png" alt="Netflix Logo">
+          </a>
         <p> Hosted by: <span id="host"></span></p>
         <!-- <button id='click-me'>Click Me!</button> -->
       <div>
