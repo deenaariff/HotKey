@@ -1,0 +1,23 @@
+Sat Feb 13 00:39:50.572 [initandlisten] MongoDB starting : pid=22180 port=27017 dbpath=/home/ntasfi/data/mongod/db 64-bit host=blade
+Sat Feb 13 00:39:50.572 [initandlisten] db version v2.4.9
+Sat Feb 13 00:39:50.572 [initandlisten] git version: nogitversion
+Sat Feb 13 00:39:50.572 [initandlisten] build info: Linux orlo 3.2.0-58-generic #88-Ubuntu SMP Tue Dec 3 17:37:58 UTC 2013 x86_64 BOOST_LIB_VERSION=1_54
+Sat Feb 13 00:39:50.572 [initandlisten] allocator: tcmalloc
+Sat Feb 13 00:39:50.572 [initandlisten] options: { dbpath: "/home/ntasfi/data/mongod/db" }
+Sat Feb 13 00:39:50.594 [initandlisten] journal dir=/home/ntasfi/data/mongod/db/journal
+Sat Feb 13 00:39:50.594 [initandlisten] recover begin
+Sat Feb 13 00:39:50.594 [initandlisten] recover lsn: 0
+Sat Feb 13 00:39:50.594 [initandlisten] recover /home/ntasfi/data/mongod/db/journal/j._0
+Sat Feb 13 00:39:50.609 [initandlisten] recover cleaning up
+Sat Feb 13 00:39:50.609 [initandlisten] removeJournalFiles
+Sat Feb 13 00:39:50.709 [initandlisten] recover done
+Sat Feb 13 00:39:50.709 [initandlisten] preallocating a journal file /home/ntasfi/data/mongod/db/journal/prealloc.0
+Sat Feb 13 00:39:54.706 [initandlisten] couldn't unlink socket file /tmp/mongodb-27017.sockerrno:1 Operation not permitted skipping
+Sat Feb 13 00:39:54.706 [initandlisten] waiting for connections on port 27017
+Sat Feb 13 00:39:54.706 [websvr] admin web console waiting for connections on port 28017
+Sat Feb 13 00:39:56.608 [initandlisten] connection accepted from 127.0.0.1:46952 #1 (1 connection now open)
+Sat Feb 13 00:39:56.609 [conn1] CMD: drop mock.users
+Sat Feb 13 00:39:56.612 [conn1] end connection 127.0.0.1:46952 (0 connections now open)
+Sat Feb 13 00:39:56.626 [initandlisten] connection accepted from 127.0.0.1:46953 #2 (1 connection now open)
+Sat Feb 13 00:39:56.626 [conn2] CMD: drop mock.users
+Sat Feb 13 00:39:56.627 [conn2] end connection 127.0.0.1:46953 (0 connections now open)
