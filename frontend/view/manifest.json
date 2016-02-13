@@ -1,23 +1,27 @@
 {
   "manifest_version": 2,
 
-  "name": "",
-  "description": "potluck",
-  "version": "1.0",
-
-  "background": {
-    "persistent": false,
-    "scripts": [
-        "./bg/background.js"
-    ]
-  },
+  "name": "potluck",
+  "description": "share and manage your accounts",
+  "version": "0.1",
 
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
     "default_title": "Click here!"
   },
+
+  "background": {
+    "scripts": [
+    "background.js"
+    ],
+    "persistent": false
+  },
+
   "permissions": [
+   "tabs", 
+   "http://*/*", 
+   "https://*/*",
     "activeTab",
     "notifications"
   ]
