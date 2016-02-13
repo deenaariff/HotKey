@@ -1,1 +1,0 @@
-TreeHacks = angular.module('myApp',['Controllers']);
