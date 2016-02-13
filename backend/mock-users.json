@@ -27,7 +27,8 @@
 			}
 		}
 	}
-},{	
+},
+{	
 	"name": "Frodo",
 	"user_id": "001",
 	"services": {}
