@@ -23,7 +23,7 @@ If there are no services found for our user the response is:
 }
 ``` 
 
-### `/service/:serviceid/:userid"
+### `/service/:serviceid/:userid`
 Returns back the information needed to login to a service. It contains the username, password, login and password for the specific service.
 
 Structure of the returned json:
@@ -41,6 +41,5 @@ If there is no login information available for the userid and serviceid pairing 
 
 ```json
 {
-  "services": []
 }
 ```
