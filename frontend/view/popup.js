@@ -17,39 +17,27 @@ document.addEventListener('DOMContentLoaded', function () {
   //   Notification.requestPermission();
   // }
 
+  document.getElementById("button").addEventListener('click', function() {
+    chrome.tabs.create({url:this.getAttribute('href')});
+  });
+
   document.getElementById("button-wrapper").addEventListener('click', function(e) {
-    // e.preventDefault()
-    // console.log("hello");
+   
 
-    // alert('hello');
+    //chrome.extension.getBackgroundPage().alert(); //console.log('foo');
 
-    // chrome.extension.getBackgroundPage().alert(); //console.log('foo');
-
-    // var xhr = new XMLHttpRequest();
-    // xhr.onreadystatechange = handleStateChange; // Implemented elsewhere.
-    // xhr.open("GET", chrome.extension.getURL("http://7a855198.ngrok.io/services/003"), true);
-    // xhr.send();
-    // alert(xhr.status());
-    // alert(xhr.response());
-
-    url = "https://www.google.com/";
     // url = "http://7a855198.ngrok.io/services/003";
 
-    $.get(url, function(data) {
-
-      // redirect to another page:
-      // chrome.extension.sendRequest({redirect: "https://www.netflix.com/Login"}); // send message to redirect
-      // chrome.runtime.sendMessage({redirect: "https://www.netflix.com/Login"});
+    /*$.get(url, function(data) {
 
       chrome.extension.getBackgroundPage().alert("Load was performed." + data);
       changeHostName("Deen");
-    });
+    }); */
 
   });
 
   document.getElementById('host').innerHTML="Ben Shukman";
 })
-
 
 
 // var options = {
