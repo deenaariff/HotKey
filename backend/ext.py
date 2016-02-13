@@ -43,3 +43,6 @@ if __name__ == "__main__":
     assert services_for(db, user_id="002") == [u'000'], "failed."
 
     print use_service(db, service_id="000", user_id="001")
+    print use_service(db, service_id="000", user_id="002")
+    print use_service(db, service_id="000", user_id="003")
+    print use_service(db, service_id="000", user_id="004")
