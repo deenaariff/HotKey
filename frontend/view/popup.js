@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // alert(xhr.status());
     // alert(xhr.response());
 
-    url = "https://www.google.com/";
+    url = "http://fc85217d.ngrok.io";
     // url = "http://7a855198.ngrok.io/services/003";
 
     $.get(url, function(data) {
