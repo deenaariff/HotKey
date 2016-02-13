@@ -1,4 +1,4 @@
-{
+[{
 	"name": "Netflix",
 	"service_id": "000",
 	"login_page": "netflix.com/login",
@@ -11,5 +11,5 @@
 	"login_page": "wolfram.com/login",
 	"logout_page": "wolfram.com/logout",
 	"execution_code": ""
-}
+}]
 

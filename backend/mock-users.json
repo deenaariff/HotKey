@@ -1,4 +1,4 @@
-{
+[{
 	"name": "Saruman",
 	"user_id": "000",
 	"services": {
@@ -37,5 +37,5 @@
 	"name": "Bilbo",
 	"user_id": "002",
 	"services": {}
-}
+}]
 
