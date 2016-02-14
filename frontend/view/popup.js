@@ -36,16 +36,18 @@ $( document ).ready(function() {
 });
 =======
 document.addEventListener('DOMContentLoaded', function () {
-
   document.getElementById('host').innerHTML="Ben Shukman";
   document.getElementById("button").addEventListener('click', function() {
-    chrome.tabs.create({url:this.getAttribute('href')}, function() {
+	//ajax here
+    	//user local storage
+    	localStorage.setItem("data", "sdfkljahdfakldsjhf");
+	chrome.tabs.create({url:this.getAttribute('href')}, function() {
     	//the tab has loaded
-	//
-    });
-
+    	});
   });
-
 })
+<<<<<<< HEAD
 
 >>>>>>> 75b4a06af4a9e4cf52911fdbf26a3f07ee1cf7b0
+=======
+>>>>>>> 0aa2e590ee15f61ab47a86d3234bac57a918450a

@@ -5,7 +5,6 @@
 	"version": "0.1",
 
 	"browser_action": {
-		//"default_icon": "/Icons/icon.png",
 		"default_popup": "popup.html",
 		"default_title": "Share with friends"
 	},
@@ -19,6 +18,7 @@
 		}
 	],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	"permissions": [
 		   "tabs", 
@@ -38,6 +38,9 @@
   //   }],
 
   "background": {
+=======
+"background": {
+>>>>>>> 0aa2e590ee15f61ab47a86d3234bac57a918450a
     "scripts": [
     "background.js"
     ],
@@ -50,7 +53,8 @@
    "http://*/*", 
    "https://*/*",
     "activeTab",
-    "notifications"
+    "notifications",
+    "storage"
   ]
 >>>>>>> 75b4a06af4a9e4cf52911fdbf26a3f07ee1cf7b0
 }
