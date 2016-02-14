@@ -118,11 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
       // changeHostName("Deen");
     }); 
 
-  });
-
   document.getElementById('host').innerHTML="Gandalf";
   document.getElementById('host2').innerHTML="Bilbo";
-})
+
+});
 
 // netflix form info
 // email -> <input class="ui-text-input" name="email"
