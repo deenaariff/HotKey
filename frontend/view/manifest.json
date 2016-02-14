@@ -12,15 +12,45 @@
 
 	"content_scripts": [
 		{
-			"matches": ["http://*/*", "https://*/*"],
+			"all_frames": true,
+			"matches": ["<all_urls>"],
 			"run_at": "document_end",
 			"js": ["jquery-2.2.0.min.js", "autofill.js"]
 		}
 	],
 
+<<<<<<< HEAD
 	"permissions": [
 		   "tabs", 
 		   "notifications",
 		   "storage"
 	]
+=======
+  // "content_scripts": [{
+  //     "matches": [
+  //       "http://www.*",
+  //       "https://www.*"
+  //     ],
+  //     "js": [
+  //       "autofill.js",
+  //       "jquery-2.2.0.min.js"
+  //     ]
+  //   }],
+
+  "background": {
+    "scripts": [
+    "background.js"
+    ],
+    "persistent": false
+  },
+
+  "permissions": [
+   "tabs", 
+   "http://*/",
+   "http://*/*", 
+   "https://*/*",
+    "activeTab",
+    "notifications"
+  ]
+>>>>>>> 75b4a06af4a9e4cf52911fdbf26a3f07ee1cf7b0
 }

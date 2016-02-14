@@ -28,13 +28,14 @@ def _updateUser(db, _user_id, updated_user):
 
 # add end-user authentication to services 
 def _addAuth(db, _user_id, service_id, new_user_id):
-	result = 0
-	for u in db.users.find():
-		if u["user_id"] == _user_id:
-			for s in u["services"]:
-				if s["service_id"] == service_id:
-					s["users_allow"].append(new_user_id)
-					db.users.update_one({"$user_id":_user_id}, u)
+        result = db.users.update(
+                {"user_id": _user_id, "services.service_id": service_id },
+                {"$push": { "services.$.users_allow": new_user_id }}, 
+                upsert=False, 
+                multi=True
+        )
+
+
 
 #TESTS
 if __name__ == "__main__":
@@ -60,11 +61,11 @@ if __name__ == "__main__":
 	#_updateUser("001", test_user)
 
 	# add authentication
-	_addAuth(db, u'003', u'000', u'000')
+	_addAuth(db, u'000', u'001', u'099')
 
 	# remove authentication
-	for user in db.users.find():
-		pp.pprint(user)
+	#for user in db.users.find():
+	#	pp.pprint(user)
 
 	# print data
 

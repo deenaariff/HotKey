@@ -8,6 +8,7 @@ function changeHostName(name) {
   document.getElementById('host').innerHTML=name;
 }
 
+<<<<<<< HEAD
 function pingContent(tab) {
 	chrome.runtime.sendMessage(tabs[0].id,{cmd: "test"}, function(res){
 		alert(res.sure)
@@ -33,3 +34,18 @@ $( document ).ready(function() {
 
 
 });
+=======
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.getElementById('host').innerHTML="Ben Shukman";
+  document.getElementById("button").addEventListener('click', function() {
+    chrome.tabs.create({url:this.getAttribute('href')}, function() {
+    	//the tab has loaded
+	//
+    });
+
+  });
+
+})
+
+>>>>>>> 75b4a06af4a9e4cf52911fdbf26a3f07ee1cf7b0
