@@ -41,13 +41,19 @@ body {
 }
 
 #user_img {
+	color: #ABB7B7;
 	vertical-align:middle;
 	display: inline-block;
 	padding-right: 7px;
 }
 
 #user_name {
+	color: #ABB7B7;
 	text-align: center;
 	font-size: 25;
 	display: inline-block;
+}
+
+.clicked {
+	color: green;
 }

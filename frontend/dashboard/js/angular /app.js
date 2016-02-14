@@ -1,1 +1,1 @@
-TreeHacks = angular.module('myApp',['Controllers']);
+TreeHacks = angular.module('myApp',['Controllers', 'ngRoute']);
