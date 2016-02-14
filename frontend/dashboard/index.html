@@ -3,10 +3,12 @@
 <html ng-app = "TreeHacks">
 	
 	<head>
-		<link rel="stylesheet" href="style.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+		<script src = "jquery-2.2.0.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src='js/script.js'></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body ng-controller = "MainCtrl">
@@ -32,7 +34,7 @@
 						<i class="fa fa-user fa-2x"></i>
 					</div>
 					<!-- friend name -->
-					<div id="user_name">
+					<div id="user_name" onclick="changeColor()">
 						Bilbo Baggins
 					</div> 
 				</div>
@@ -42,7 +44,7 @@
 					<div id="user_img">
 						<i class="fa fa-user fa-2x"></i>
 					</div>
-					<div id="user_name">
+					<div id="user_name" onclick="changeColor()">
 						Frodo Baggins
 					</div> 
 				</div>
@@ -51,10 +53,11 @@
 					<div id="user_img">
 						<i class="fa fa-plus fa-2x"></i>
 					</div>
-					<div id = "user_name">
+					<a id="user_name" onclick="changeColor()">
 						Add a user
-					</div> 
+					</a> 
 				</div>
+				<!-- <a href="#" class="btn btn-default btn-lg active" role="button">Link</a> -->
 
 			</div>
 

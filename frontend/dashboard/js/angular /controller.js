@@ -1,5 +1,6 @@
-var Controllers = angular.module('Controllers',['Services']) 
+var Controllers = angular.module('Controllers',['Services']);
 
 Controllers.controller('MainCtrl', function($scope) {
 
 };
+
