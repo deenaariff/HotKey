@@ -1,9 +1,11 @@
 body {
 	font-family: Roboto;
 	margin: 0px;
+	background-color: #F2F1EF;
 }
 
 #logo {
+	border: solid 1px black;
 	max-width: 100%;
 	height: auto;
 }
@@ -13,10 +15,13 @@ body {
 }
 
 #service {
+	margin: 2%;
+	border: solid 2px black;
 	float: left;
 	display: inline-block;
 	width: 40%;
 	padding: 20px;
+	background-color: white;
 }
 
 #banner {
@@ -28,6 +33,7 @@ body {
 }
 
 #user {
+	padding-top: 13px;
 	width: 50%;
 	text-align: center;
 	/* Set the margin-left and margin-right automatically set */
@@ -35,10 +41,13 @@ body {
 }
 
 #user_img {
+	vertical-align:middle;
 	display: inline-block;
 	padding-right: 7px;
 }
 
 #user_name {
+	text-align: center;
+	font-size: 25;
 	display: inline-block;
 }
