@@ -1,7 +1,6 @@
 var test3;
 var myNotificationID = null;
 
-
 function clickHandler(e) {
     chrome.runtime.sendMessage({directive: "popup-click"}, function(response) {
         this.close(); // close the popup when the background finishes processing request
@@ -129,3 +128,15 @@ document.addEventListener('DOMContentLoaded', function () {
 // email -> <input class="ui-text-input" name="email"
 // password -> <input class="ui-text-input" name="password"
 // remember me -> <input type="checkbox" class="login-input-remember-me" name="rememberMeCheckbox"
+
+
+// $( document ).ready(function() {
+// 	changeHostName("Ben Shukman");
+// 	document.getElementById("button").addEventListener('click', function() {
+// 		chrome.tabs.create({url:this.getAttribute('href')}, function(tab) {
+// 			chrome.runtime.sendMessage({cmd: "test"}, function(res){
+// 				alert(res.sure)
+// 			})
+// 		});
+// 	});
+// });

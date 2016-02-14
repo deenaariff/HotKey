@@ -1,3 +1,4 @@
+
 var port = chrome.runtime.connect({name: "autofill"});
 port.onMessage.addListener(function(message, sender) {
 	if(message.greeting == "hello") {
@@ -21,3 +22,11 @@ port.onMessage.addListener(function(message, sender) {
 // 		}
 // 	}
 // );
+
+$( document ).ready(function(){
+	alert("testing outside");
+	chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse){
+		alert("testing");
+		sendResponse("response....");
+	});
+});

@@ -12,22 +12,23 @@ def services_for(c, user_id=""):
     return services
 
 def use_service(c, service_id="", user_id=""):
-    users = c.users.find()
-
+    bundles = c.users.find({"services.service_id": service_id, "services.users_allow": user_id})
+    
     return_message = {}
-
-    for u in users:
-        for s in u['services']:
-            for user_id in s['users_allow']:
-                if s['service_id'] == service_id:
-                    return_message['username'] = s['auth_bundle']['username']
-                    return_message['password'] = s['auth_bundle']['password']
-
-    if return_message == {}:
+    
+    bundles = [b['services'] for b in bundles]
+    
+    if len(bundles) == 0:
         return -1
 
+    if len(bundles) > 0:
+        bundles = bundles[0][0]
+
+    return_message['username'] = bundles['auth_bundle']['username']
+    return_message['password'] = bundles['auth_bundle']['password']
+
     service = c.services.find({"service_id": service_id})[0]
-    
+
     return_message['login_page'] = service['login_page']
     return_message['logout_page'] = service['logout_page']
 
@@ -43,3 +44,6 @@ if __name__ == "__main__":
     assert services_for(db, user_id="002") == [u'000'], "failed."
 
     print use_service(db, service_id="000", user_id="001")
+    print use_service(db, service_id="000", user_id="002")
+    print use_service(db, service_id="000", user_id="003")
+    print use_service(db, service_id="000", user_id="004")

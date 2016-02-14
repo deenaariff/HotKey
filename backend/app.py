@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import ext
 from pymongo import MongoClient
 
@@ -16,13 +16,16 @@ def base_page():
 def handle_usage(service_id, user_id):
     resp = ext.use_service(db, service_id=service_id, user_id=user_id)
     if resp == -1:
-        return "Error."
+        return jsonify({})
     else:
-        return str(resp)
+        return jsonify(**resp)
 
 @app.route("/services/<user_id>")
 def handle_service_for(user_id):
     resp = ext.services_for(db, user_id=user_id)
-    return str(resp)
+    if len(resp) == 0:
+        return jsonify({"services":[]})
+    else:    
+        return jsonify({"services":resp})
 
 app.run()
