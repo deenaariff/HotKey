@@ -35,6 +35,26 @@ def _addAuth(db, _user_id, service_id, new_user_id):
                 multi=True
         )
 
+# retrieve all services for a user
+
+def _getServices(db, _user_id):
+    result = ''
+    for user in users_coll.find():
+        if user['user_id'] == user_id:
+            result = user['services'];
+    return result;
+
+
+def _isAuth (db, _req_id, _owner_id):
+	result = 0;
+	auth_users = db.users.find(
+                {"user_id": _user_id, "services.service_id": service_id },
+                { "services.$.users_allow": new_user_id }, 
+    )
+    for(user in auth_users)
+    	if (user == _req_id)
+    		result == 1
+    return result
 
 
 #TESTS
