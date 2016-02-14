@@ -1,5 +1,3 @@
-super_secret_variable = "Hello?!!?!?";
-
 function clickHandler(e) {
     chrome.runtime.sendMessage({directive: "popup-click"}, function(response) {
         this.close(); // close the popup when the background finishes processing request
@@ -14,7 +12,9 @@ $( document ).ready(function() {
 	changeHostName("Ben Shukman");
 	document.getElementById("button").addEventListener('click', function() {
 		chrome.tabs.create({url:this.getAttribute('href')}, function(tab) {
-			chrome.runtime.sendMessage({cmd: "test"}, function(res){alert(res.sure)})
+			chrome.runtime.sendMessage({cmd: "test"}, function(res){
+				alert(res.sure)
+			})
 		});
 	});
 });
