@@ -9,15 +9,13 @@ function changeHostName(name) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-
   document.getElementById('host').innerHTML="Ben Shukman";
   document.getElementById("button").addEventListener('click', function() {
-    chrome.tabs.create({url:this.getAttribute('href')}, function() {
+	//ajax here
+    	//user local storage
+    	localStorage.setItem("data", "sdfkljahdfakldsjhf");
+	chrome.tabs.create({url:this.getAttribute('href')}, function() {
     	//the tab has loaded
-	//
-    });
-
+    	});
   });
-
 })
-
