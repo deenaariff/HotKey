@@ -1,0 +1,44 @@
+body {
+	font-family: Roboto;
+	margin: 0px;
+}
+
+#logo {
+	max-width: 100%;
+	height: auto;
+}
+#services_table {
+	display: flex;
+	justify-content:space-between;
+}
+
+#service {
+	float: left;
+	display: inline-block;
+	width: 40%;
+	padding: 20px;
+}
+
+#banner {
+	height: 80px;
+	background-color: #ecf0f1;
+	border-bottom-color: #B8000A;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+}
+
+#user {
+	width: 50%;
+	text-align: center;
+	/* Set the margin-left and margin-right automatically set */
+	margin: 0 auto;
+}
+
+#user_img {
+	display: inline-block;
+	padding-right: 7px;
+}
+
+#user_name {
+	display: inline-block;
+}
