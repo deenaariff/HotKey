@@ -5,7 +5,6 @@
 	"version": "0.1",
 
 	"browser_action": {
-		//"default_icon": "/Icons/icon.png",
 		"default_popup": "popup.html",
 		"default_title": "Share with friends"
 	},
@@ -19,18 +18,7 @@
 		}
 	],
 
-  // "content_scripts": [{
-  //     "matches": [
-  //       "http://www.*",
-  //       "https://www.*"
-  //     ],
-  //     "js": [
-  //       "autofill.js",
-  //       "jquery-2.2.0.min.js"
-  //     ]
-  //   }],
-
-  "background": {
+"background": {
     "scripts": [
     "background.js"
     ],
@@ -43,6 +31,7 @@
    "http://*/*", 
    "https://*/*",
     "activeTab",
-    "notifications"
+    "notifications",
+    "storage"
   ]
 }
