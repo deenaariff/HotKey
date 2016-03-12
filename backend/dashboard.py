@@ -36,7 +36,6 @@ def _addAuth(db, _user_id, service_id, new_user_id):
         )
 
 # retrieve all services for a user
-
 def _getServices(db, _user_id):
     result = ''
     for user in users_coll.find():
